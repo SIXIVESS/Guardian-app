@@ -2,22 +2,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="431dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="100dp"
         app:srcCompat="@drawable/logo"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="148dp" />
 
+    <TextView
+        android:id="@+id/iniciar_sesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:gravity="center_horizontal"
+        android:text="GUARDIÁN"
+        android:textColor="@color/primaryColor"
+        android:textSize="75sp"
+        android:textStyle="bold" />
+
     <Button
         android:id="@+id/button"
-        android:layout_width="246dp"
-        android:layout_height="58dp"
-        android:text="Button" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/buttonColor"
+        android:padding="10dp"
+        android:text="Entrar"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
 </LinearLayout>

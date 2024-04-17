@@ -6,4 +6,7 @@
     <color name="supportColor">#E9C46A</color>
     <color name="extraColor">#E76F51</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="statusBarColor">#2A9D8F</color>
+
 </resources>

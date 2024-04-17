@@ -17,10 +17,25 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login" />
+
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Register" />
+
+        <activity
+            android:name=".RegisterCompActivity"
+            android:label="RegisterComp" />
+
+        <activity
+            android:name=".MenuActivity"
+            android:label="Menu" />
     </application>
 
 </manifest>

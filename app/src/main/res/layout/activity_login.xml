@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="128dp"
-        android:layout_gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="117dp"
+        android:scaleType="centerInside"
         app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/iniciar_sesion"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center|center_horizontal"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
         android:text="Iniciar sesión"
-        android:textSize="24sp"
-        android:textColor="@color/textColor"
+        android:textColor="@color/primaryColor"
+        android:textSize="34sp"
         android:textStyle="bold" />
 
     <EditText
@@ -35,9 +35,11 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:hint="Correo"
+        android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textSize="20sp"
         android:textStyle="bold" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,24 +49,21 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:hint="Contraseña"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:textSize="20sp"
-        android:textStyle="bold"
-
-        android:inputType="textPassword" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
+        android:backgroundTint="@color/buttonColor"
         android:padding="10dp"
         android:text="Entrar"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:background="@drawable/round_button" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/registroTexto"
@@ -72,26 +71,26 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:padding="10dp"
-        android:text="¿No tienes cuenta? "
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="¿No tienes cuenta?"
         android:textColor="@color/textColor"
         android:textSize="20sp" />
 
-    <TextView
+    <Button
         android:id="@+id/clickHere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/registroTexto"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:padding="10dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#02FFFFFF"
+        android:padding="5dp"
         android:text="Click aquí"
         android:textColor="@color/primaryColor"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:iconTint="#02FFFFFF" />
 
 
-
-
-</LinearLayout >
+</LinearLayout>
