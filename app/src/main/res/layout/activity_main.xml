@@ -11,7 +11,7 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="431dp"
-        app:srcCompat="@drawable/relleno"
+        app:srcCompat="@drawable/logo"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="148dp" />
 
