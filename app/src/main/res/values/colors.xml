@@ -8,5 +8,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="statusBarColor">#2A9D8F</color>
+    <color name="gold">#e9c46a</color>
 
 </resources>

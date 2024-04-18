@@ -13,10 +13,14 @@
         android:theme="@style/Theme.Guardian"
         tools:targetApi="31">
         <activity
+<<<<<<< Updated upstream
             android:name=".MenuReservacionesActivity"
             android:exported="false" />
         <activity
             android:name=".ReservacionesActivity"
+=======
+            android:name=".ProfileActivity"
+>>>>>>> Stashed changes
             android:exported="false" />
         <activity
             android:name=".MainActivity"
