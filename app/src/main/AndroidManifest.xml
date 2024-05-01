@@ -13,16 +13,6 @@
         android:theme="@style/Theme.Guardian"
         tools:targetApi="31">
         <activity
-<<<<<<< Updated upstream
-            android:name=".MenuReservacionesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ReservacionesActivity"
-=======
-            android:name=".ProfileActivity"
->>>>>>> Stashed changes
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -43,6 +33,18 @@
         <activity
             android:name=".MenuActivity"
             android:label="Menu" />
+        <activity
+            android:name=".MascotaActivity"
+            android:label="Mascota" />
+        <activity
+            android:name=".MenuReservacionesActivity"
+            android:label="MenuReservaciones" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="Profile" />
+        <activity
+            android:name=".ReservacionesActivity"
+            android:label="Reservaciones" />
     </application>
 
 </manifest>
