@@ -27,6 +27,7 @@
         android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/txtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iniciar_sesion"
@@ -41,6 +42,7 @@
         android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/txtPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iniciar_sesion"

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "543578625161",
+    "project_id": "guardian-bd",
+    "storage_bucket": "guardian-bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543578625161:android:a5e006a6fc8a3e53296258",
+        "android_client_info": {
+          "package_name": "mx.itson.edu.guardian"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9LzX3AnLqmF3x0J4a1Tf1G1EyK1hXyoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

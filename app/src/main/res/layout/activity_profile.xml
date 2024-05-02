@@ -112,15 +112,7 @@
         tools:text="&gt;">
     </Button>
 
-    <ImageView
-        android:id="@+id/menuLogo"
-        android:layout_width="30sp"
-        android:layout_height="30sp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="63dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -128,63 +120,9 @@
         android:layout_marginTop="670dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/homeLogo"
-            android:layout_width="61dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/casa" />
 
-        <ImageView
-            android:id="@+id/calendarLogo"
-            android:layout_width="30dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/homeLogo"
-            app:layout_constraintTop_toBottomOf="@+id/menuLogo"
-            app:srcCompat="@drawable/calendario" />
 
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="61dp"
-            android:layout_height="50sp"
-            android:layout_marginStart="25dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/notificationLogo"
-            app:layout_constraintStart_toEndOf="@+id/calendarLogo"
-            app:srcCompat="@drawable/mas" />
 
-        <ImageView
-            android:id="@+id/notificationLogo"
-            android:layout_width="26dp"
-            android:layout_height="32dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView12"
-            app:layout_constraintTop_toTopOf="@+id/imageView12"
-            app:srcCompat="@drawable/notificacion" />
-
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="26dp"
-            android:layout_height="35dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="24dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/usuario" />
 
     </LinearLayout>
 
