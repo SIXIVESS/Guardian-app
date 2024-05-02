@@ -35,8 +35,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView7"
+    <EditText
+        android:id="@+id/nombreMascota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -51,12 +51,12 @@
         tools:text="Benito" />
 
     <EditText
-        android:id="@+id/nombreMascota"
+        android:id="@+id/razaMascota"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
-        android:hint="Nombre"
+        android:hint="Raza"
         android:inputType="text"
         android:padding="10dp"
         android:textSize="20sp"
@@ -94,7 +94,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descripcionMascota" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
 
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:backgroundTint="@color/buttonColor"
+            android:padding="10dp"
+            android:text="Agregar"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
     <com.ismaeldivita.chipnavigation.ChipNavigationBar
         android:id="@+id/bottom_nav_bar"
         android:layout_width="match_parent"

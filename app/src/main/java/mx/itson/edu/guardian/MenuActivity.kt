@@ -2,6 +2,8 @@ package mx.itson.edu.guardian
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import mx.itson.edu.guardian.databinding.ActivityMenuBinding
@@ -16,6 +18,21 @@ class MenuActivity : AppCompatActivity() {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         setUpTabBar()
+
+        val intent1 = intent
+
+        val correo = intent1.getStringExtra("correo")
+
+        Log.d("TAG", "Correo electrónico del usuario: $correo")
+
+        val MascotasButton : Button = findViewById(R.id.btnMascotas)
+
+        MascotasButton.setOnClickListener {
+            var intent: Intent = Intent( this, MascotaActivity::class.java)
+            intent.putExtra("correo", correo) // Adjunta el correo electrónico como extra al Intent
+            startActivity(intent)
+        }
+
     }
 
     private fun setUpTabBar(){

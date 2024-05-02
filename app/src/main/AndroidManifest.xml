@@ -45,6 +45,16 @@
         <activity
             android:name=".ReservacionesActivity"
             android:label="Reservaciones" />
+
+        <activity
+            android:name=".RegisterMascota"
+            android:exported="true" />
+
+        <activity
+            android:name=".Pet"
+            android:exported="true" />
+
+        <activity android:name=".InfoMascota" />
     </application>
 
 </manifest>
