@@ -9,13 +9,17 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
+import mx.itson.edu.guardian.databinding.ActivityEditarMascotaBinding
 
 
 class InfoMascota : AppCompatActivity() {
+    private lateinit var binding: ActivityEditarMascotaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_editar_mascota)
+        binding = ActivityEditarMascotaBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+       // setContentView(R.layout.activity_editar_mascota)
 
         val intent = intent
         val nombre = intent.getStringExtra("nombre")
@@ -40,6 +44,8 @@ class InfoMascota : AppCompatActivity() {
         val agendaButton : Button = findViewById(R.id.calendarButton)
         val editButton : Button = findViewById(R.id.editButton)
         val deleteButton : Button = findViewById(R.id.eraseButton)
+
+        setUpTabBar()
 
         agendaButton.setOnClickListener {
             val intent = Intent(this, ReservacionesActivity::class.java)
@@ -88,5 +94,34 @@ class InfoMascota : AppCompatActivity() {
 
     }
 
+    private fun setUpTabBar(){
+        binding.bottomNavBar.setOnItemSelectedListener{
+            when(it){
+                R.id.nav_menu ->{
+
+                    startActivity(Intent(this, MenuActivity::class.java))
+                    true
+                }
+
+                R.id.nav_calendar ->{
+
+                    startActivity(Intent(this, MenuReservacionesActivity::class.java))
+                    true
+                }
+
+                R.id.nav_add ->{
+
+                    startActivity(Intent(this, MascotaActivity::class.java))
+                    true
+                }
+
+                R.id.nav_profile ->{
+
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    true
+                }
+            }
+        }
+    }
 
 }

@@ -1,6 +1,7 @@
 package mx.itson.edu.guardian
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -14,6 +15,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import mx.itson.edu.guardian.databinding.ActivityRegisterReservacionBinding
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -36,9 +38,16 @@ class RegisterReservacion : AppCompatActivity() {
 
     private var fechaSeleccionada: Date? = null
 
+    private lateinit var binding: ActivityRegisterReservacionBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_reservacion)
+       // setContentView(R.layout.activity_register_reservacion)
+
+        binding = ActivityRegisterReservacionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        setUpTabBar()
 
         spinnerEmpresas = findViewById(R.id.spinnerEmpresas)
         spinnerMascotas = findViewById(R.id.spinnerMascotas)
@@ -147,5 +156,35 @@ class RegisterReservacion : AppCompatActivity() {
 
         // Mostrar el diálogo de selección de fecha
         datePickerDialog.show()
+    }
+
+    private fun setUpTabBar(){
+        binding.bottomNavBar.setOnItemSelectedListener{
+            when(it){
+                R.id.nav_menu ->{
+
+                    startActivity(Intent(this, MenuActivity::class.java))
+                    true
+                }
+
+                R.id.nav_calendar ->{
+
+                    startActivity(Intent(this, MenuReservacionesActivity::class.java))
+                    true
+                }
+
+                R.id.nav_add ->{
+
+                    startActivity(Intent(this, MascotaActivity::class.java))
+                    true
+                }
+
+                R.id.nav_profile ->{
+
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    true
+                }
+            }
+        }
     }
 }

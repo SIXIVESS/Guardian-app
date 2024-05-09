@@ -14,6 +14,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import mx.itson.edu.guardian.databinding.ActivityMascotaBinding
+import androidx.appcompat.app.AppCompatDelegate
+import android.view.MenuItem
 
 
 class MascotaActivity : AppCompatActivity() {
@@ -33,6 +35,7 @@ class MascotaActivity : AppCompatActivity() {
 
         database = FirebaseDatabase.getInstance()
 
+        setUpTabBar()
 
         val btnAgregar: Button = findViewById(R.id.addButton)
 
@@ -49,8 +52,11 @@ class MascotaActivity : AppCompatActivity() {
                 cargarMascota(correo, i + 1)
             }
         }
+
+        /*
         binding.bottomnavbar.setOnItemSelectedListener { item ->
-            when (item.itemId) {
+            Log.d("FAAK", item.toString())
+            when (item) {
                 R.id.nav_menu -> {
                     startActivity(Intent(this, MainActivity::class.java))
                     true
@@ -68,7 +74,7 @@ class MascotaActivity : AppCompatActivity() {
                 }
                 else -> false
             }
-        }
+        }*/
     }
 
 
@@ -121,6 +127,34 @@ class MascotaActivity : AppCompatActivity() {
         }
     }
 
+    private fun setUpTabBar(){
+        binding.bottomnavbar.setOnItemSelectedListener{
+            when(it){
+                R.id.nav_menu ->{
 
+                    startActivity(Intent(this, MenuActivity::class.java))
+                    true
+                }
+
+                R.id.nav_calendar ->{
+
+                    startActivity(Intent(this, MenuReservacionesActivity::class.java))
+                    true
+                }
+
+                R.id.nav_add ->{
+
+                    startActivity(Intent(this, MascotaActivity::class.java))
+                    true
+                }
+
+                R.id.nav_profile ->{
+
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    true
+                }
+            }
+        }
+    }
 
 }
