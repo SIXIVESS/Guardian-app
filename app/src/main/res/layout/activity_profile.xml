@@ -7,12 +7,24 @@
     android:orientation="vertical"
     tools:context=".ProfileActivity">
 
+    <TextView
+        android:id="@+id/registro_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
+        android:text="Registro"
+        android:textColor="@color/primaryColor"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"/>
+
     <RelativeLayout
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="135dp"
         android:background="#e9c46a">
     </RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="327dp"
@@ -28,17 +40,7 @@
         android:layout_height="156dp"
             android:src="@drawable/guardian"/>
 
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:textColor="#264653"
-            android:lineSpacingExtra="8.4sp"
-            android:gravity="center_horizontal"
-            tools:text="Jeff t k"/>
+
 
         <TextView
             android:id="@+id/userMail"
@@ -64,7 +66,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Mis mascotas"/>
+            android:text="Mis mascotas"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
 
     </RelativeLayout>
 
@@ -79,7 +86,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Mis reservaciones"/>
+            android:paddingLeft="10dp"
+            android:text="Mis reservaciones"
+            android:gravity="left|center"
+            android:textSize="20sp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
     </RelativeLayout>
 
 
@@ -87,9 +99,10 @@
     <Button
         android:layout_width="50dp"
         android:layout_height="34dp"
+        android:backgroundTint="@color/buttonColor"
         android:layout_marginLeft="300dp"
         android:layout_marginTop="335dp"
-        android:background="@drawable/arrow_button"
+
         android:fontFamily="sans-serif"
         android:textStyle="normal"
         android:textSize="18sp"
@@ -97,6 +110,7 @@
         android:lineSpacingExtra="4.2sp"
         android:gravity="center"
         tools:text="&gt;">
+
     </Button>
 
     <Button
@@ -104,7 +118,7 @@
         android:layout_height="34dp"
         android:layout_marginLeft="300dp"
         android:layout_marginTop="393dp"
-        android:background="@drawable/arrow_button"
+        android:backgroundTint="@color/buttonColor"
         android:fontFamily="sans-serif"
         android:textStyle="normal"
         android:textSize="18sp"

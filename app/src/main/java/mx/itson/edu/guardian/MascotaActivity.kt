@@ -5,44 +5,29 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.getValue
+import mx.itson.edu.guardian.databinding.ActivityMascotaBinding
 
 
 class MascotaActivity : AppCompatActivity() {
-    //private lateinit var binding: ActivityMascotaBinding
+
     private lateinit var database: FirebaseDatabase
-    //private lateinit var petName1: TextView
-    //private lateinit var petName2: TextView
-    //private lateinit var petRef: DatabaseReference
+    private lateinit var binding: ActivityMascotaBinding
+
 
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mascota)
-
-        // petName1 = findViewById(R.id.nombreMascota)
-        // petName2 = findViewById(R.id.nombreMascota1)
-
-        /*
-        super.onCreate(savedInstanceState)
-        binding= ActivityMascotaBinding.inflate(layoutInflater)
+        binding = ActivityMascotaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //-------------------NAV----------------------------
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        setUpTabBar()
-*/
-        //-------------------CRUD----------------------------
+
         val intent = intent
         val correo = intent.getStringExtra("correo")
 
@@ -64,7 +49,28 @@ class MascotaActivity : AppCompatActivity() {
                 cargarMascota(correo, i + 1)
             }
         }
+        binding.bottomnavbar.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_menu -> {
+                    startActivity(Intent(this, MainActivity::class.java))
+                    true
+                }
+                R.id.nav_calendar -> {
+                    startActivity(Intent(this, MenuReservacionesActivity::class.java))
+                    true
+                }
+                R.id.nav_add -> {
+                //
+                }
+                R.id.nav_profile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
     }
+
 
     private fun cargarMascota(correo: String?, numMas: Int) {
         correo?.let { userEmail ->
@@ -114,5 +120,7 @@ class MascotaActivity : AppCompatActivity() {
             })
         }
     }
+
+
 
 }

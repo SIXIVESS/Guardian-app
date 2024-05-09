@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".RegisterReservacion">
 
     <TextView
@@ -11,8 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="93dp"
+        android:textColor="@color/primaryColor"
+        android:textSize="34sp"
         android:text="Registrar reservación"
-        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,6 +23,7 @@
     <Spinner
         android:id="@+id/spinnerEmpresas"
         android:layout_width="0dp"
+        android:textColor="@color/textColor"
         android:layout_height="41dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="31dp"
@@ -46,6 +50,7 @@
         android:id="@+id/spinnerMascotas"
         android:layout_width="0dp"
         android:layout_height="38dp"
+        android:textColor="@color/textColor"
         android:layout_marginStart="43dp"
         android:layout_marginTop="318dp"
         android:layout_marginEnd="43dp"
@@ -61,6 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:layout_marginBottom="7dp"
+        android:textColor="@color/textColor"
         android:text="Mascota"
         app:layout_constraintBottom_toTopOf="@+id/spinnerMascotas"
         app:layout_constraintStart_toStartOf="@+id/spinnerMascotas" />
@@ -69,8 +75,12 @@
         android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="82dp"
+        android:layout_marginEnd="60dp"
         android:text="Cancelar"
+        android:backgroundTint="@color/buttonColor"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnAgregar"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -81,6 +91,10 @@
         android:layout_marginTop="79dp"
         android:layout_marginEnd="46dp"
         android:text="Agregar"
+        android:backgroundTint="@color/buttonColor"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/btnCancelar"
         app:layout_constraintTop_toBottomOf="@+id/spinnerMascotas" />
 
@@ -93,6 +107,9 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="66dp"
         android:text="Seleccionar fecha"
+        android:backgroundTint="@color/buttonColor"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/spinnerEmpresas"
         app:layout_constraintEnd_toStartOf="@+id/fechaSeleccionadaTextView"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,10 +118,20 @@
     <TextView
         android:id="@+id/fechaSeleccionadaTextView"
         android:layout_width="0dp"
+        android:textColor="@color/textColor"
         android:layout_height="38dp"
         android:layout_marginEnd="63dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/seleccionarFechaButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/seleccionarFechaButton" />
 
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:cnb_menuResource="@menu/nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

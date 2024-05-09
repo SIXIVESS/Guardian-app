@@ -15,9 +15,7 @@
         <activity
             android:name=".RegisterReservacion"
             android:exported="false" />
-        <activity
-            android:name=".Register_Reservacion"
-            android:exported="false" />
+      
         <activity
             android:name=".MainActivity"
             android:exported="true">

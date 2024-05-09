@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
     android:background="@color/white"
     tools:context=".MenuActivity">
 
@@ -13,11 +11,20 @@
         android:id="@+id/iniciar_sesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GUARDIÁN"
+        android:text="Menú principal"
         android:textColor="@color/primaryColor"
-        android:textSize="25sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-         />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
 
 
     <TextView
@@ -25,7 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reservaciones"
-         />
+        android:textColor="@color/textColor"
+        />
 
     <Button
         android:id="@+id/btnReservar"
@@ -46,13 +54,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Próxima Reservación"
+        android:textColor="@color/textColor"
         />
 
     <ListView
         android:id="@+id/listView3"
         android:layout_width="356dp"
         android:layout_height="100dp"
-         />
+        />
 
     <Button
         android:id="@+id/btnMascotas"
@@ -70,14 +79,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listView3" />
 
-   >
-
-    <com.ismaeldivita.chipnavigation.ChipNavigationBar
-        android:id="@+id/bottom_nav_bar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        app:cnb_menuResource="@menu/nav_menu" />
 
 </LinearLayout>
+
+<com.ismaeldivita.chipnavigation.ChipNavigationBar
+android:id="@+id/bottom_nav_bar"
+android:layout_width="match_parent"
+android:layout_height="60dp"
+android:background="@color/white"
+app:cnb_menuResource="@menu/nav_menu"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

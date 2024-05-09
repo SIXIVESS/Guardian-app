@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
     android:background="@color/white"
     tools:context=".LoginActivity">
 
 
     <TextView
         android:id="@+id/iniciar_sesion"
-        android:layout_width="166dp"
-        android:layout_height="54dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="GUARDIÁN"
+        android:text="Agregar mascota"
         android:textColor="@color/primaryColor"
-        android:textSize="25sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
     <EditText
         android:id="@+id/nombreMascota"
@@ -109,13 +110,13 @@
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
-
+    </LinearLayout>
     <com.ismaeldivita.chipnavigation.ChipNavigationBar
         android:id="@+id/bottom_nav_bar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
         android:background="@color/white"
-        app:cnb_menuResource="@menu/nav_menu" />
+        app:cnb_menuResource="@menu/nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent" /> />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
