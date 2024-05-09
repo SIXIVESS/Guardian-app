@@ -27,13 +27,22 @@ class MenuActivity : AppCompatActivity() {
 
         val MascotasButton : Button = findViewById(R.id.btnMascotas)
 
+        val ReservarButton : Button = findViewById(R.id.btnReservar)
+
         MascotasButton.setOnClickListener {
             var intent: Intent = Intent( this, MascotaActivity::class.java)
             intent.putExtra("correo", correo) // Adjunta el correo electrónico como extra al Intent
             startActivity(intent)
         }
 
+        ReservarButton.setOnClickListener {
+            var intent: Intent = Intent( this, RegisterReservacion::class.java)
+            startActivity(intent)
+        }
+
     }
+
+
 
     private fun setUpTabBar(){
         binding.bottomNavBar.setOnItemSelectedListener{

@@ -29,6 +29,7 @@
             android:src="@drawable/guardian"/>
 
         <TextView
+            android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
@@ -40,6 +41,7 @@
             tools:text="Jeff t k"/>
 
         <TextView
+            android:id="@+id/userMail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
